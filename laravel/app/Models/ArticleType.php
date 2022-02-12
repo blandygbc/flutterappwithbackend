@@ -17,4 +17,4 @@ class ArticleType extends Model
     }
 }
 
-//php artisan admin:make ArticleController --model=App\Model\Article
+//php artisan admin:make ArticleController --model=App\\Model\\ArticleType

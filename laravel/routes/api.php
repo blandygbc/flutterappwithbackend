@@ -24,8 +24,8 @@ Route::get('/user', 'App\Http\Controllers\UserController@getCurrentUser');
 Route::post('/update', 'App\Http\Controllers\UserController@update');
 Route::get('/logout', 'App\Http\Controllers\UserController@logout');
 
-
-
-
 //get type_ie=3 articles where are welcome info
 Route::get('/welcomeinfo/', 'App\Http\Controllers\ArticlesController@welcomeInfo');
+//recommended
+Route::get('/recommendedarticles/', 'App\Http\Controllers\ArticlesController@getRecommended');
+Route::get('/allarticles/', 'App\Http\Controllers\ArticlesController@getAllArticles');

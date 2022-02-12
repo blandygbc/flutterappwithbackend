@@ -59,11 +59,11 @@ class User extends Authenticatable implements JWTSubject
     public static function getCurrentUser($request){
         if(!User::checkToken($request)){
             return response()->json([
-             'message' => 'Token is required'
+                'message' => 'Token is required'
             ],422);
         }
-         
+
         $user = JWTAuth::parseToken()->authenticate();
         return $user;
-     }
+    }
 }

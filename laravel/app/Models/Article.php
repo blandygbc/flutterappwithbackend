@@ -19,7 +19,7 @@ class Article extends Model
         return $this->where(['is_recommend'=>0])->orderBy('id', 'DESC')->limit(3)->get();
     }
     public function getWelcomeInfo(){
-        return $this->where(['type_id'=>3])->orderBy('id', 'DESC')->limit(3)->get();
+        return $this->where(['type_id'=>5])->orderBy('id', 'DESC')->limit(3)->get();
     }
     public function getRecent(){
         return $this->limit(5)->orderBy('id', 'DESC')->get();

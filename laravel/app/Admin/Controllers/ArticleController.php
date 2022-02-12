@@ -36,7 +36,6 @@ class ArticleController extends AdminController
         $grid->column('is_recommend', __('Recommend'))->bool();
         $grid->column('created_at', __('Created_at'));
         $grid->column('updated_at', __('Updated_at'));
-       // $grid->column('deleted_at', __('Deleted at'));
 
         return $grid;
     }
@@ -56,6 +55,7 @@ class ArticleController extends AdminController
         $show->field('type_id', __('Type_id'));
         $show->column('author', __('Author'));
         $show->field('description', __('Description'));
+        $show->field('is_recommend', __('Recommend'))->bool();
         $show->field('img', __('Thumbnail'))->image();
         $show->field('article_content', __('Article_content'));
         $show->field('created_at', __('Created_at'));
@@ -78,6 +78,7 @@ class ArticleController extends AdminController
         $form->text('author', __('Author'));
         $form->text('description', __('Description'));
         $form->image('img', __('Thumbnail'))->uniqueName();
+        $form->text('keywords', __('Keywords'));
         $form->UEditor('article_content','Article_content');
         $states = [
         'on'  => ['value' => 1, 'text' => 'Recommend', 'color' => 'success'],
